@@ -16,7 +16,7 @@ namespace WebApplication1
     public partial class CustomerMetaData
     {
         [DisplayName("Customer Name")]
-        [Required(ErrorMessage = "You must enter a customer name")]
+        [Required(ErrorMessage = "You must enter a customer name!")]
         [MaxLength(50, ErrorMessage = "Movie name must be 50 character or less")]
         public string CustomerName { get; set; }
         [DisplayName("Customer Phone Number")]
