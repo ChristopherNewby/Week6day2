@@ -1,0 +1,52 @@
+﻿
+@model IEnumerable<WebApplication1.Models.CatalogClass>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.newMov.MovieName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.newCust.CustomerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.newRecord.ReturnDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.newRecord.DueDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.newRecord.RentalDate)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.newMov.MovieName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.newCust.CustomerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.newRecord.ReturnDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.newRecord.DueDate)
+                </td>
+                <th>
+                    @Html.DisplayFor(modelItem => item.newRecord.RentalDate)
+                </th>
+            </tr>
+        }
+
+    </table>
